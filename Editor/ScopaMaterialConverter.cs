@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
@@ -10,13 +11,19 @@ public class ScopaMaterialConverter : MonoBehaviour
     [MenuItem("Assets/Scopa/Export Materials...")]
     private static void ExportTextures()
     {
-        var materialList = UnityExtensions.RecursiveMaterialSearch();
-        var previews = GeneratePreviews(materialList);
+        var materials = Selection.objects.Where(o => o.GetType() == typeof(Material)).Select(o => (Material)o).ToList();
+        if (materials.Count == 0)
+        {
+            Debug.LogError("Select at least one Material");
+            return;
+        }
 
         string dirPath = EditorUtility.SaveFolderPanel("Save Textures", Application.dataPath, "Texures");
 
         if (Directory.Exists(dirPath))
         {
+            var previews = GeneratePreviews(materials);
+
             foreach (var preview in previews)
             {
                 byte[] bytes = preview.EncodeToPNG();
