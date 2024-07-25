@@ -224,7 +224,7 @@ namespace Scopa
                     face.UAxis = direction == ScopaMesh.Axis.X ? System.Numerics.Vector3.UnitZ : System.Numerics.Vector3.UnitX;
                     face.VAxis = direction == ScopaMesh.Axis.Y ? -System.Numerics.Vector3.UnitZ : -System.Numerics.Vector3.UnitY;
 
-                    face.TextureName = face.TextureName.ToLowerInvariant();
+                    //face.TextureName = face.TextureName.ToLowerInvariant();
                     face.TextureName = face.TextureName
                                         .Split(new string[] { @"/" }, StringSplitOptions.RemoveEmptyEntries)
                                         .LastOrDefault();
