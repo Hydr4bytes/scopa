@@ -1,3 +1,5 @@
 is_global = true
 build_property.RootNamespace = Sledge.Formats
-build_property.ProjectDir = G:\Game Design\Unity Projects\Scopa Testing\Assets\Runtime\Sledge.Formats\Sledge.Formats\
+build_property.ProjectDir = C:\Users\Lars\Documents\GitHub\scopa\Runtime\Sledge.Formats\Sledge.Formats\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

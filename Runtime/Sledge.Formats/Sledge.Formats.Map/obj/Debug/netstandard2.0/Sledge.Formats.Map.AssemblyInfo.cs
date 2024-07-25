@@ -18,7 +18,7 @@ using System.Reflection;
     "in the idtech2 and valve formats, Worldcraft RMF v2.2, and partial support for S" +
     "ource Hammer VMF and Jackhammer/JACK JMF formats.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.6.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.6+5c09424f75cd928c8c60baf1b199c5b5c88df63d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Sledge.Formats.Map")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Sledge.Formats.Map")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.6.0")]
